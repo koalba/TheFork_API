@@ -14,7 +14,7 @@ app.use( express.urlencoded({ extended : false }) )
 app.use( express.json() )
 app.use( router )
 
-let connect = async () => await mongoose.connect( `mongodb+srv://${mongo_user}:${mongo_pass}@koalba.ghgng.mongodb.net/the-fork?retryWrites=true&w=majority`, {
+let connect = async () => await mongoose.connect( `mongodb+srv://${process.env.mongo_user}:${process.env.mongo_pass}@koalba.ghgng.mongodb.net/the-fork?retryWrites=true&w=majority`, {
         useNewUrlParser    : true,
         useUnifiedTopology : true
     }, () => console.log('MongoDB Connect'))

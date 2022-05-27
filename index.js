@@ -7,7 +7,7 @@ const router   = require( './router/router' )
 const cors     = require( 'cors' )
 const mongoose = require('mongoose')
 
-const { mongo_user , mongo_pass }  = require( 'dotenv' ).config().parsed
+// const { mongo_user , mongo_pass }  = require( 'dotenv' ).config().parsed
 
 app.use( cors() )
 app.use( express.urlencoded({ extended : false }) )
